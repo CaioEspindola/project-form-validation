@@ -1,0 +1,162 @@
+input, label {
+  display: block;
+  width: 100%;
+}
+
+input:focus, label:focus {
+  outline: none;
+}
+
+a {
+  color: blue;
+}
+
+body {
+  height: 100vh;
+  padding-top: 5vh;
+  background-color: #fad2eb;
+}
+
+span {
+  font-family: 'Sofia Sans Extra Condensed', sans-serif;
+  font-size: 1.4rem;
+  color: #6328e2;
+}
+
+/*FORM*/
+#form-container {
+  width: 400px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffcd;
+  border-radius: 30px;
+  padding: 25px;
+}
+
+#form-container h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-family: 'Sevillana', cursive;
+  color: #6328e2;
+  font-size: 2rem;
+}
+
+.form-box {
+  position: relative;
+}
+
+label {
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+input {
+  border-bottom: 2px solid;
+  padding: 10px;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+input:focus {
+  border-color: #6328e2;
+}
+
+input[type='submit'] {
+  background-color: #6328e2;
+  font-family: 'Sevillana', cursive;
+  font-size: 1.4rem;
+  color: #ffffcd;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#agreement {
+  margin-right: 5px;
+}
+
+#agreement, #agreement-label {
+  display: inline-block;
+  width: auto;
+}
+
+/*VALIDATION*/
+.error-validation {
+  color: #6328e2;
+  position: absolute;
+  top: 57px;
+  font-size: 0.8rem;
+}
+
+.template {
+  display: none;
+}
+
+.footer_contain img {
+  width: 100vw;
+  height: 350px;
+  position: fixed;
+}
+
+/*RESPONSIVE*/
+
+/*Laptop P*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  #form-container {
+    width: 380px;
+  }
+
+  .footer_contain img {
+    height: 150px;
+    bottom: 0px;
+  }
+
+  #form-container h1 {
+    font-size: 1.8rem;
+  }
+
+  span {
+    font-size: 1.3rem;
+  }
+}
+
+/*Tablet*/
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  #form-container {
+    width: 350px;
+  }
+
+  .footer_contain img {
+    height: 100px;
+    bottom: 0px;
+  }
+
+  #form-container h1 {
+    font-size: 1.5rem;
+  }
+
+  span {
+    font-size: 1.2rem;
+  }
+}
+
+/*Mobile*/
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  #form-container {
+    width: 300px;
+  }
+
+  .footer_contain img {
+    height: 100px;
+    bottom: 0px;
+  }
+
+  #form-container h1 {
+    font-size: 1.3rem;
+  }
+
+  span {
+    font-size: 0.9rem;
+  }
+}
