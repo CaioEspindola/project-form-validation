@@ -72,7 +72,7 @@ class Validator {
 
     let email = input.value
 
-    let errorMessage = `*Please, insert your email. Ex: email@email.com.`
+    let errorMessage = `*Please, insert your email. Ex: email@email.com`
 
     if (!re.test(email)) {
       this.printMessage(input, errorMessage)
