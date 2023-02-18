@@ -53,9 +53,9 @@ class Validator {
     }, this)
   }
 
-  /////** Parte 5 **///// METODOS DE VERIFICAÇÕES:
+  /////** Parte 5 **///// MÉTODOS DE VERIFICAÇÕES:
 
-  //Verificão 1: Verifica se o input é requerido:
+  //Verificação 1: Verifica se o input é requerido:
 
   required(input) {
     let inputValue = input.value
@@ -66,7 +66,7 @@ class Validator {
     }
   }
 
-  //Verificão 2: Aplicando Regex no input do email:
+  //Verificação 2: Aplicando Regex no input do email:
   emailvalidate(input) {
     let re = /\S+@\S+\.\S+/
 
@@ -79,7 +79,7 @@ class Validator {
     }
   }
 
-  //Verificão 3: Verifica se o input tem apenas letras:
+  //Verificação 3: Verifica se o input tem apenas letras:
   onlyletters(input) {
     let re = /^[A-Za-z]+$/
 
@@ -92,7 +92,7 @@ class Validator {
     }
   }
 
-  // Verificão 4: Verifica se o input tem o número mínimo de caracteres definido para os inputs:
+  // Verificação 4: Verifica se o input tem o número mínimo de caracteres definido para os inputs:
   minlength(input, minValue) {
     let inputLength = input.value.length
 
@@ -103,7 +103,7 @@ class Validator {
     }
   }
 
-  // Verificão 5: Verifica se o input tem o número máximo de caracteres definido para os inputs:
+  // Verificação 5: Verifica se o input tem o número máximo de caracteres definido para os inputs:
   maxlength(input, maxValue) {
     let inputLength = input.value.length
 
@@ -124,7 +124,7 @@ class Validator {
     let numbers = 0
     //loop para percorrer todos os caracteres:
     for (let i = 0; charArray.length > i; i++) {
-      //se a letra atual do loop for maiusculo && se o char for número (Porem, é necessario transformar o numero no tipo number)
+      //se a letra atual do loop for maiúsculo && se o char for número (Porem, é necessário transformar o número no tipo number)
       if (
         charArray[i] === charArray[i].toUpperCase() &&
         isNaN(parseInt(charArray[i]))
@@ -136,7 +136,7 @@ class Validator {
     }
 
     if (uppercases === 0 || numbers === 0) {
-      let errorMessage = `*Password needs 1 uppercase character and 1 number.`
+      let errorMessage = `*It needs 1 uppercase letter and 1 number.`
 
       this.printMessage(input, errorMessage)
     }

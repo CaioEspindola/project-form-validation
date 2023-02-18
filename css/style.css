@@ -150,6 +150,7 @@ input[type='submit'] {
   .footer_contain img {
     height: 100px;
     bottom: 0px;
+    z-index: -1;    
   }
 
   #form-container h1 {
