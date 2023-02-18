@@ -1,4 +1,4 @@
-\*Form validation project with HTML, CSS and javaScript.
+Form validation project with HTML, CSS and javaScript.
 
 In this project, the challenge was to put object-oriented programming studies into practice, creating different validation methods to check if what was inserted by the user are the same as those required.
 
