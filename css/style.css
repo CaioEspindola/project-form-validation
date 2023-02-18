@@ -97,6 +97,7 @@ input[type='submit'] {
   width: 100vw;
   height: 350px;
   position: fixed;
+  z-index: -1;    
 }
 
 /*RESPONSIVE*/
@@ -109,8 +110,7 @@ input[type='submit'] {
 
   .footer_contain img {
     height: 150px;
-    bottom: 0px;
-    z-index: -1;    
+    bottom: 0px;    
   }
 
   #form-container h1 {
