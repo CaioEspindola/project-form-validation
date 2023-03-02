@@ -1,7 +1,7 @@
 /////** Parte 2 **/////
 
 //Classe que vai dar origem às validações.
-//Contructor com as propriedades do objeto criado.
+//Constructor com as propriedades do objeto criado.
 //Array para mapear e percorrer todas as validações do projeto.
 class Validator {
   constructor() {
@@ -18,6 +18,8 @@ class Validator {
 
   /////** Parte 3 **///// Processos para acessar e poder verificar as validações dos inputs do formulário:
 
+  errorCount = 0
+
   validate(form) {
     //Resgata todas as validações erradas e se tiver alguma presente na tela, limpar após usuário corrigir:
     let currentValidations = document.querySelectorAll('form .error-validation')
@@ -25,6 +27,7 @@ class Validator {
     if (currentValidations.length > 0) {
       this.clearValidations(currentValidations)
     }
+
     //Pegar todos os inputs:
     let inputs = form.getElementsByTagName('input')
 
@@ -51,6 +54,7 @@ class Validator {
         }
       }
     }, this)
+    return this.errorCount
   }
 
   /////** Parte 5 **///// MÉTODOS DE VERIFICAÇÕES:
@@ -63,6 +67,7 @@ class Validator {
       let errorMessage = '*This field is required.'
 
       this.printMessage(input, errorMessage)
+      return this.errorCount++
     }
   }
 
@@ -76,6 +81,7 @@ class Validator {
 
     if (!re.test(email)) {
       this.printMessage(input, errorMessage)
+      return this.errorCount++
     }
   }
 
@@ -89,6 +95,7 @@ class Validator {
 
     if (!re.test(inputValue)) {
       this.printMessage(input, errorMessage)
+      return this.errorCount++
     }
   }
 
@@ -100,6 +107,7 @@ class Validator {
 
     if (inputLength < minValue) {
       this.printMessage(input, errorMessage)
+      return this.errorCount++
     }
   }
 
@@ -111,6 +119,7 @@ class Validator {
 
     if (inputLength > maxValue) {
       this.printMessage(input, errorMessage)
+      return this.errorCount++
     }
   }
 
@@ -139,6 +148,7 @@ class Validator {
       let errorMessage = `*It needs 1 uppercase letter and 1 number.`
 
       this.printMessage(input, errorMessage)
+      return this.errorCount++
     }
   }
 
@@ -150,6 +160,7 @@ class Validator {
 
     if (input.value != inputToCompare.value) {
       this.printMessage(input, errorMessage)
+      this.errorCount++
     }
   }
 
@@ -177,6 +188,7 @@ class Validator {
   //Para REMOVER as mensagens de erros da tela:
   clearValidations(validations) {
     validations.forEach(el => el.remove())
+    this.errorCount = 0
   }
 } ///////////////FINAL DA FUNÇÃO PRINCIPAL/////////////////////
 
@@ -192,6 +204,11 @@ let validator = new Validator()
 submit.addEventListener('click', function (e) {
   e.preventDefault() //Impede o formulário de fazer sua função padrão de enviar os dados para o servidor validar.
 
-  //Ao clicar no INPUT, o objeto já vai estar instância, ativando o método de validação definido no validate.
-  validator.validate(form)
+  result = validator.validate(form)
+
+  if (result === 0) {
+    console.log('Deu Boa!')
+    window.location.href =
+      'http://127.0.0.1:5501/project-registration-form/successful-registation.html'
+  }
 })
