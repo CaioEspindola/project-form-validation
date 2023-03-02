@@ -208,7 +208,6 @@ submit.addEventListener('click', function (e) {
 
   if (result === 0) {
     console.log('Deu Boa!')
-    window.location.href =
-      'http://127.0.0.1:5501/project-registration-form/successful-registation.html'
+    window.location.href = 'https://github.com/CaioEspindola'
   }
 })
