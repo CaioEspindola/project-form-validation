@@ -208,8 +208,7 @@ submit.addEventListener('click', function (e) {
 
   if (result === 0) {
     console.log('Deu Boa!')
-    window.location.href =
-      '/project-registration-form/successful-registration.html'
-    /* window.location.href = 'https://github.com/CaioEspindola' */
+    alert('Cadastro com sucesso!')
+    window.location.href = 'https://caio-portfolio-xi.vercel.app/'
   }
 })
