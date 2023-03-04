@@ -12,7 +12,8 @@ class Validator {
       'data-min-length',
       'data-max-length',
       'data-password-validate',
-      'data-equal'
+      'data-equal',
+      'data-checkbox'
     ]
   }
 
@@ -163,7 +164,6 @@ class Validator {
       this.errorCount++
     }
   }
-
   ///** PARTE 6 **/// PARA IMPRIMIR E REMOVER MENSAGEM DE ERRO NA TELA:
 
   //Para IMPRIMIR mensagem de erro na tela:
@@ -208,7 +208,9 @@ submit.addEventListener('click', function (e) {
 
   if (result === 0) {
     console.log('Deu Boa!')
-    alert('Cadastro com sucesso!')
+    alert(
+      'Congratulation!!! Successful Registration. Thank you for choosing us, Enjoy!  '
+    )
     window.location.href = 'https://caio-portfolio-xi.vercel.app/'
   }
 })

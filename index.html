@@ -1,98 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap" rel="stylesheet">
-    <title>Create Account</title>
-  </head>
-  <body>
-    <div id="form-container">
-      <h1>Welcome to the Best</br>Drawing and Painting class.</br><span>Register here:</span></h1>
-      <form id="register-form">
-        <div class="form-box">
-          <label for="email">Email:</label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Type your e-mail"
-            data-required
-            data-email-validate
-          />
-        </div>
-        <div class="form-box">
-          <label for="name">Name:</label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Type your name"
-            data-required
-            data-only-letters
-            data-min-length="4"
-            data-max-length="16"
-          />
-        </div>
-        <div class="form-box">
-          <label for="lastname">Last Name:</label>
-          <input
-            type="text"
-            name="lastname"
-            id="lastname"
-            placeholder="Type your last name"
-            data-required
-            data-only-letters
-            data-min-length="4"
-            data-max-length="16"
-          />
-        </div>
-        <div class="form-box">
-          <label for="password">Password:</label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            placeholder="Type your password"
-            data-required
-            data-password-validate
-          />
-        </div>
-        <div class="form-box">
-          <label for="passconfirmation">Confirm Password:</label>
-          <input
-            type="password"
-            name="passconfirmation"
-            id="passconfirmation"
-            placeholder="Confirm your password"
-            data-required
-            data-equal="password"
-          />
-        </div>
-        <div class="form-box">
-          <input type="checkbox" name="agreement" id="agreement" />
-          <label for="email" id="agreement-label">
-            I read and accept. <a href="https://drive.google.com/file/d/18IEFH4zm-qndlNAAsgFD8dDR-mc39j-j/view?usp=share_link" target="_blank">Terms of use.</a></label
-          >
-        </div>
-        <div class="form-box">                       
-          <input type="submit" id="btn-submit" value="Register"/>         
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap" rel="stylesheet">
+  <title>Create Account</title>
+</head>
+
+<body>
+  <div id="form-container">
+    <h1>Welcome to the Best</br>Drawing and Painting class.</br><span>Register here:</span></h1>
+    <form id="register-form">
+      <div class="form-box">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="Type your e-mail" data-required data-email-validate />
       </div>
-      </form>
-      <p class="error-validation template"></p>
-    </div>   
-       <script src="./js/scripts.js"></script>
-  </body>
-  <footer>    
-      <div class="footer_contain">   
-        <img src="./assets/img/background-pencil-color.png" alt="">     
-      </div>    
-  </footer>
+      <div class="form-box">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" placeholder="Type your name" data-required data-only-letters
+          data-min-length="4" data-max-length="16" />
+      </div>
+      <div class="form-box">
+        <label for="lastname">Last Name:</label>
+        <input type="text" name="lastname" id="lastname" placeholder="Type your last name" data-required
+          data-only-letters data-min-length="4" data-max-length="16" />
+      </div>
+      <div class="form-box">
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" placeholder="Type your password" data-required
+          data-password-validate />
+      </div>
+      <div class="form-box">
+        <label for="passconfirmation">Confirm Password:</label>
+        <input type="password" name="passconfirmation" id="passconfirmation" placeholder="Confirm your password"
+          data-required data-equal="password" />
+      </div>
+      <div class="form-box">
+        <input type="checkbox" name="agreement" id="agreement" checked />
+        <label for="email" id="agreement-label">
+          I read and accept. <a
+            href="https://drive.google.com/file/d/18IEFH4zm-qndlNAAsgFD8dDR-mc39j-j/view?usp=share_link"
+            target="_blank">Terms of use.</a></label>
+      </div>
+      <div class="form-box">
+        <input type="submit" id="btn-submit" value="Register" />
+      </div>
+    </form>
+  </div>
+  <p class="error-validation template"></p>
+  </div>
+  <script src="./js/scripts.js"></script>
+</body>
+<footer>
+  <div class="footer_contain">
+    <img src="./assets/img/background-pencil-color.png" alt="color pencil image">
+  </div>
+</footer>
 </html>
