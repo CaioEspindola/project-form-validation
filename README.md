@@ -27,9 +27,9 @@ As the user interacts with the form, he receives explanatory error messages, gui
 
 <img src='./assets/img/project-form-validation-github.jpg'></img>
 
-<h2>🕹Link Website:</h2>
+<h2>🕹Website link:</h2>
 
-https://caio-portfolio-xi.vercel.app/
+https://project-form-validation.vercel.app/
 
 <h2>🐱‍🏍Social media:</h2>
 <a href="https://linkedin.com/in/caio-espíndola">
