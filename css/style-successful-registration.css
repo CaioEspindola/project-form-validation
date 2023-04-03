@@ -1,0 +1,56 @@
+body {
+  height: 100vh;
+  padding-top: 5vh;
+  background-color: #fad2eb; 
+}
+
+.container_box {
+  width: 400px;
+  height: 400px;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffcd;
+  border-radius: 30px;
+  padding: 25px;
+
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+} 
+
+.card h1 {
+  font-family:'Sofia Sans Extra Condensed', sans-serif;
+  font-size: 2.5rem;
+  color: #6328e2;
+
+}
+
+.card h2 {
+  font-family:'Sofia Sans Extra Condensed', sans-serif;
+  font-size: 2rem;
+  color: #6328e2;
+
+}
+
+.card p {
+  font-family:'Sevillana', cursive;
+  font-size: 2rem;
+  margin-top: 10px;
+}
+
+.btn_back {
+  background-color: #6328e2;
+  font-family: 'Sevillana', cursive;
+  font-size: 1.4rem;
+  color: #ffffcd;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+
+  height: 50px;
+  width: 200px;
+
+  margin-top: 20px;
+}

@@ -1,7 +1,7 @@
 /////** Parte 2 **/////
 
 //Classe que vai dar origem às validações.
-//Contructor com as propriedades do objeto criado.
+//Constructor com as propriedades do objeto criado.
 //Array para mapear e percorrer todas as validações do projeto.
 class Validator {
   constructor() {
@@ -12,11 +12,14 @@ class Validator {
       'data-min-length',
       'data-max-length',
       'data-password-validate',
-      'data-equal'
+      'data-equal',
+      'data-checkbox'
     ]
   }
 
   /////** Parte 3 **///// Processos para acessar e poder verificar as validações dos inputs do formulário:
+
+  errorCount = 0
 
   validate(form) {
     //Resgata todas as validações erradas e se tiver alguma presente na tela, limpar após usuário corrigir:
@@ -25,6 +28,7 @@ class Validator {
     if (currentValidations.length > 0) {
       this.clearValidations(currentValidations)
     }
+
     //Pegar todos os inputs:
     let inputs = form.getElementsByTagName('input')
 
@@ -51,6 +55,7 @@ class Validator {
         }
       }
     }, this)
+    return this.errorCount
   }
 
   /////** Parte 5 **///// MÉTODOS DE VERIFICAÇÕES:
@@ -63,6 +68,7 @@ class Validator {
       let errorMessage = '*This field is required.'
 
       this.printMessage(input, errorMessage)
+      return this.errorCount++
     }
   }
 
@@ -72,10 +78,11 @@ class Validator {
 
     let email = input.value
 
-    let errorMessage = `*Please, insert your email. Ex: email@email.com.`
+    let errorMessage = `*Please, insert your email. Ex: email@email.com`
 
     if (!re.test(email)) {
       this.printMessage(input, errorMessage)
+      return this.errorCount++
     }
   }
 
@@ -89,6 +96,7 @@ class Validator {
 
     if (!re.test(inputValue)) {
       this.printMessage(input, errorMessage)
+      return this.errorCount++
     }
   }
 
@@ -100,6 +108,7 @@ class Validator {
 
     if (inputLength < minValue) {
       this.printMessage(input, errorMessage)
+      return this.errorCount++
     }
   }
 
@@ -111,6 +120,7 @@ class Validator {
 
     if (inputLength > maxValue) {
       this.printMessage(input, errorMessage)
+      return this.errorCount++
     }
   }
 
@@ -139,6 +149,7 @@ class Validator {
       let errorMessage = `*It needs 1 uppercase letter and 1 number.`
 
       this.printMessage(input, errorMessage)
+      return this.errorCount++
     }
   }
 
@@ -150,9 +161,9 @@ class Validator {
 
     if (input.value != inputToCompare.value) {
       this.printMessage(input, errorMessage)
+      this.errorCount++
     }
   }
-
   ///** PARTE 6 **/// PARA IMPRIMIR E REMOVER MENSAGEM DE ERRO NA TELA:
 
   //Para IMPRIMIR mensagem de erro na tela:
@@ -177,6 +188,7 @@ class Validator {
   //Para REMOVER as mensagens de erros da tela:
   clearValidations(validations) {
     validations.forEach(el => el.remove())
+    this.errorCount = 0
   }
 } ///////////////FINAL DA FUNÇÃO PRINCIPAL/////////////////////
 
@@ -192,6 +204,13 @@ let validator = new Validator()
 submit.addEventListener('click', function (e) {
   e.preventDefault() //Impede o formulário de fazer sua função padrão de enviar os dados para o servidor validar.
 
-  //Ao clicar no INPUT, o objeto já vai estar instância, ativando o método de validação definido no validate.
-  validator.validate(form)
+  result = validator.validate(form)
+
+  if (result === 0) {
+    console.log('Deu Boa!')
+    alert(
+      'Congratulation!!! Successful Registration. Thank you for choosing us, Enjoy!  '
+    )
+    window.location.href = 'https://caio-portfolio-xi.vercel.app/'
+  }
 })

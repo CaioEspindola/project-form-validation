@@ -54,7 +54,7 @@ label {
 input {
   border-bottom: 2px solid;
   padding: 10px;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   margin-bottom: 20px;
 }
 
@@ -86,7 +86,7 @@ input[type='submit'] {
   color: #6328e2;
   position: absolute;
   top: 57px;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 
 .template {
@@ -97,6 +97,7 @@ input[type='submit'] {
   width: 100vw;
   height: 350px;
   position: fixed;
+  z-index: -1;    
 }
 
 /*RESPONSIVE*/
@@ -109,7 +110,7 @@ input[type='submit'] {
 
   .footer_contain img {
     height: 150px;
-    bottom: 0px;
+    bottom: 0px;    
   }
 
   #form-container h1 {
@@ -150,7 +151,7 @@ input[type='submit'] {
   .footer_contain img {
     height: 100px;
     bottom: 0px;
-    z-index: -1;    
+    
   }
 
   #form-container h1 {
